@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 
 defineProps({
 
@@ -41,5 +41,6 @@ defineEmits(["toggle-favorite"])
 </script>
 
 <style scoped>
+
 
 </style>

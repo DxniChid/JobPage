@@ -1,6 +1,14 @@
 <script>
 
+import Header from './components/header.vue'
 
+export default{
+
+  components: {
+    Header
+  }
+
+}
 
 
 
@@ -8,7 +16,12 @@
 
 <template>
   
-  <header></header>
+  <header>
+  <Header title="Job Page" icon="src/images/pfp.webp" link="test"></Header>
+
+
+
+  </header>
 
 
 

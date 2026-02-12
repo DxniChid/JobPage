@@ -9,7 +9,7 @@ const jobs = ref([
 
 
   id: 1,
-  title: "INformatiker/in EFZ",
+  title: "Informatiker/in EFZ",
   company: "Informatik GmbH",
     city: "Jegenstorf",
     zip: "3303",
@@ -45,10 +45,26 @@ const jobs = ref([
 </script>
 
 <template>
+  <header>
+    <h3>Meine Favoriten</h3>
+    <h1>Jobpage</h1>
+  </header>
+  <div class="search-wrap">
+    <input
+      v-model="search"
+      class="search"
+      placeholder="Bitte eingeben..."
+    />
+    <button class="filter">⚙</button>
+  </div>
   <Job_Ad
     :jobs="jobs"
     @toggle-favorite="toggleFavorite"
   />
+
+<footer>
+  test test
+</footer>
 </template>
 
 <style scoped></style>

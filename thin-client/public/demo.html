@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Thin Client Demo</title>
+  <!-- Basic styles (can be overridden) -->
+  <link rel="stylesheet" href="../src/styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>Unsere offenen Stellen</h1>
+  </header>
+
+  <!-- 1. Platzhalter mit Konfiguration -->
+  <div id="job-client"
+       data-api-url="https://api.jobs.bfo.ch"
+       data-category="IT"
+       data-region=""
+       data-language="CH-de"
+       data-filter-options='["HomeOffice", "Language", "Workplace"]'
+       data-style-entry="../src/styles/main.css"
+       data-style-search-bar="button { background-color: green; }"
+       data-use-mock="true">
+  </div>
+
+  <!-- 2. Einbindung des Thin Client Scripts -->
+  <script type="module" src="../src/index.js"></script>
+  <!-- Hinweis: In der Produktion wird die gebündelte Datei verwendet -->
+</body>
+</html>

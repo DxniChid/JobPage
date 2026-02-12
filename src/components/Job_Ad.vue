@@ -56,7 +56,6 @@ defineProps({
     jobs: {
         type: Array,
         required: true
-    }
   jobs: {
     type: Array,
     required: true
@@ -68,5 +67,6 @@ defineEmits(["toggle-favorite"])
 
 <style scoped>
 
+.page {
 
 </style>

@@ -11,20 +11,20 @@ const DEFAULT_API_URL = 'https://api.jobs.bfo.ch';
  * @returns {Promise<Array>} Array of job objects.
  */
 export async function fetchJobs(apiUrl = DEFAULT_API_URL, useMock = false) {
-  if (useMock) {
-    console.log('🔧 Using mock job data (testing mode)');
-    return [...mockJobs];
-  }
+	if (useMock) {
+		console.log('🔧 Using mock job data (testing mode)');
+		return [...mockJobs];
+	}
 
-  try {
-    const response = await fetch(`${apiUrl}/jobs`);
-    if (!response.ok) {
-      throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
-    }
-    const jobs = await response.json();
-    return jobs;
-  } catch (error) {
-    console.warn('⚠️ API fetch failed, falling back to mock data:', error);
-    return [...mockJobs];
-  }
+	try {
+		const response = await fetch(`${apiUrl}/jobs`);
+		if (!response.ok) {
+			throw new Error(`HTTP error ${response.status}: ${response.statusText}`);
+		}
+		const jobs = await response.json();
+		return jobs;
+	} catch (error) {
+		console.warn('⚠️ API fetch failed, falling back to mock data:', error);
+		return [...mockJobs];
+	}
 }

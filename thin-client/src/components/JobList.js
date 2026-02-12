@@ -6,12 +6,12 @@ import { createJobItem } from './JobItem.js';
  * @param {Array} jobs - Array of job objects.
  */
 export function renderJobList(container, jobs) {
-  container.innerHTML = ''; // Clear previous
-  if (!jobs || jobs.length === 0) {
-    container.innerHTML = '<p class="no-jobs">Keine Stellenangebote gefunden.</p>';
-    return;
-  }
-  jobs.forEach(job => {
-    container.appendChild(createJobItem(job));
-  });
+	container.innerHTML = ''; // Clear previous
+	if (!jobs || jobs.length === 0) {
+		container.innerHTML = '<p class="no-jobs">Keine Stellenangebote gefunden.</p>';
+		return;
+	}
+	jobs.forEach(job => {
+		container.appendChild(createJobItem(job));
+	});
 }

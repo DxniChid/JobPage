@@ -14,23 +14,23 @@ Add the provided JavaScript shortly before the closing `</body>` tag.
 <script src="https://jobs.bfo.ch/thin-client.js"></script>
 ```
 
-> **For testing without a build step:**  
-> Use the ES module version directly:  
+> **For testing without a build step:**
+> Use the ES module version directly:
 > `<script type="module" src="../src/index.js"></script>`
 
 ## 3. Configuration (optional)
 Use **data attributes** to control the widget behaviour:
 
-| Attribute              | Description                                                                 | Example                         |
-|------------------------|-----------------------------------------------------------------------------|---------------------------------|
-| `data-api-url`         | Base URL of the job API (default: `https://api.jobs.bfo.ch`)               | `https://my-api.ch`            |
-| `data-category`        | Pre‑selected category                                                      | `IT`                           |
-| `data-region`          | Pre‑selected region                                                        | `VS`                           |
-| `data-language`        | Default language (passed to the API)                                       | `CH-de`                        |
-| `data-filter-options`  | JSON array with additional filters (`HomeOffice`, `Language`, `Workplace`) | `["HomeOffice","Language"]`    |
-| `data-style-entry`     | URL to a custom CSS stylesheet                                             | `/css/jobs.css`                |
-| `data-style-search-bar`| Inline CSS for the filter bar (e.g. button colour)                        | `button { background: green; }`|
-| `data-use-mock`        | Force mock data for testing (`true` / `false`)                            | `true`                         |
+| Attribute              | Description                                                                 | Example                        |
+|------------------------|-----------------------------------------------------------------------------|--------------------------------|
+| `data-api-url`         | Base URL of the job API (default: `https://api.jobs.bfo.ch`)                | `https://my-api.ch`            |
+| `data-category`        | Pre‑selected category                                                       | `IT`                           |
+| `data-region`          | Pre‑selected region                                                         | `VS`                           |
+| `data-language`        | Default language (passed to the API)                                        | `CH-de`                        |
+| `data-filter-options`  | JSON array with additional filters (`HomeOffice`, `Language`, `Workplace`)  | `["HomeOffice","Language"]`    |
+| `data-style-entry`     | URL to a custom CSS stylesheet                                              | `/css/jobs.css`                |
+| `data-style-search-bar`| Inline CSS for the filter bar (e.g. button colour)                          | `button { background: green; }`|
+| `data-use-mock`        | Force mock data for testing (`true` / `false`)                              | `true`                         |
 
 **Example with all options:**
 ```html
